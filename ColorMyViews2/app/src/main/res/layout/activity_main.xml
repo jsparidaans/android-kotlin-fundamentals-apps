@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/root">
 
     <TextView
         android:id="@+id/box_one_text"
-        style="@style/whiteBox"
+        style="@style/whiteBoxNoMargin.whiteBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/box_one"
@@ -18,7 +19,7 @@
 
     <TextView
         android:id="@+id/box_two_text"
-        style="@style/whiteBox"
+        style="@style/whiteBoxNoMargin.whiteBox"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:text="@string/box_two"
@@ -42,7 +43,7 @@
 
     <TextView
         android:id="@+id/box_four_text"
-        style="@style/whiteBoxAllMargins"
+        style="@style/whiteBoxNoMargin.AllMargins"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/box_four"
