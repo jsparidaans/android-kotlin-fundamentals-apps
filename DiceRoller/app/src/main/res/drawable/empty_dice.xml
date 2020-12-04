@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (C) 2018 Google Inc.
+  ~ Copyright 2018, The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -13,11 +13,15 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<resources>
-    <!-- App title -->
-    <string name="app_name">DiceRoller</string>
 
-    <!-- Button label -->
-    <string name="roll_label">Roll</string>
-    <string name="description_dice">six sided die</string>
-</resources>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="250dp"
+    android:viewportWidth="800"
+    android:viewportHeight="1000">
+
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,0l0,0z" />
+
+</vector>
