@@ -7,4 +7,7 @@
     <string name="box_five">Box Fire</string>
     <string name="how_to_play">How to play</string>
     <string name="instruction_1">Tap the screen and buttons</string>
+    <string name="button_red">Red</string>
+    <string name="button_yellow">Yellow</string>
+    <string name="button_green">Green</string>
 </resources>
