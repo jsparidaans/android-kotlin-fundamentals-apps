@@ -13,7 +13,7 @@
         android:layout_marginTop="@dimen/margin_wide"
         android:layout_marginEnd="@dimen/margin_wide"
         android:fontFamily="@font/roboto"
-        android:text="Hello World!"
+        android:text="@string/box_one"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
