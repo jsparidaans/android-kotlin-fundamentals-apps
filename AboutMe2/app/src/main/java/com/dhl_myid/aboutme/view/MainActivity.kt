@@ -7,15 +7,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.dhl_myid.aboutme.R
 import com.dhl_myid.aboutme.databinding.ActivityMainBinding
+import com.dhl_myid.aboutme.model.Name
 
 class MainActivity : AppCompatActivity() {
 
+    //Late inits
     private lateinit var binding: ActivityMainBinding
+
+    //Variables
+    private val name: Name = Name("Joey Sparidaans")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        binding.name = name
         binding.doneButton.setOnClickListener { addNickname(it) }
         binding.nicknameText.setOnClickListener { updateNickname() }
     }
@@ -24,10 +30,12 @@ class MainActivity : AppCompatActivity() {
         val inputMethodManager =
             getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         binding.apply {
-            nicknameText.text = binding.nicknameEdit.text.toString()
+            name?.nickname = nicknameEdit.text.toString()
             nicknameEdit.visibility = View.GONE
             doneButton.visibility = View.GONE
+            nicknameText.text = name?.nickname
             nicknameText.visibility = View.VISIBLE
+            invalidateAll()
         }
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }

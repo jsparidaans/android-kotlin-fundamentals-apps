@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="name"
+            type="com.dhl_myid.aboutme.model.Name" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +24,7 @@
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/name"
+            android:text="@={name.name}"
             android:textAlignment="center" />
 
         <EditText
@@ -27,6 +34,7 @@
             android:layout_height="wrap_content"
             android:autofillHints="@string/nickname_hint"
             android:hint="@string/nickname_hint"
+            android:text="@={name.nickname}"
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
@@ -71,5 +79,6 @@
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/bio" />
         </ScrollView>
+
     </LinearLayout>
 </layout>
