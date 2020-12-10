@@ -68,6 +68,21 @@
             tools:text="&quot;Tuna&quot;" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@{gameViewModel.hint}"
+            android:textColor="@color/grey_text_color"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/timer_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/word_text"
+            tools:text="HINT" />
+
+        <TextView
             android:id="@+id/timer_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
