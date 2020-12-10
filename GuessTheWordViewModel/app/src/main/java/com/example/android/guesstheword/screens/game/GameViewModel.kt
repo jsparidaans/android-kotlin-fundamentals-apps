@@ -66,7 +66,7 @@ class GameViewModel : ViewModel() {
         val randomPosition = (1..word.length).random()
         "Current word has " + word.length + " letters" +
                 "\nThe letter at position " + randomPosition + " is " +
-                word.get(randomPosition - 1).toUpperCase()
+                word[randomPosition - 1].toUpperCase()
     }
 
     // Timer object
