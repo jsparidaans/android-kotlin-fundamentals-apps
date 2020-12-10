@@ -61,8 +61,8 @@ class GameFragment : Fragment() {
         viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
             binding.wordText.text = newWord
         })
-        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { hasFinished->
-            if(hasFinished){
+        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { hasFinished ->
+            if (hasFinished) {
                 gameFinished()
             }
         })
@@ -92,8 +92,9 @@ class GameFragment : Fragment() {
      */
     private fun gameFinished() {
         Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
-     /*   val action = GameFragmentDirections.actionGameToScore()
+        val action = GameFragmentDirections.actionGameToScore()
         action.score = viewModel.score.value ?: 0
-        NavHostFragment.findNavController(this).navigate(action)*/
+        NavHostFragment.findNavController(this).navigate(action)
+        viewModel.onGameFinishComplete()
     }
 }
