@@ -54,6 +54,9 @@ class GameFragment : Fragment() {
         // Get the viewModel
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
+        // Set up viewModel data binding
+        binding.gameViewModel = viewModel
+
         // Set up ViewModel Observers
         viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
             binding.scoreText.text = newScore.toString()
@@ -67,24 +70,7 @@ class GameFragment : Fragment() {
             }
         })
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-        binding.endGameButton.setOnClickListener { onEndGame() }
         return binding.root
-    }
-
-    /** Methods for buttons presses **/
-
-    private fun onSkip() {
-        viewModel.onSkip()
-    }
-
-    private fun onCorrect() {
-        viewModel.onCorrect()
-    }
-
-    private fun onEndGame() {
-        gameFinished()
     }
 
     /**
